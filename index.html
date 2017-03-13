@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+	  <meta charset="UTF-8">
+	  <title>Crystal-Collector</title>
+
+	  <!-- Link to the Bootstrap CDN -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+
+<div class="row">
+	 <div class="col-md-4">
+
+	  		<div class="panel panel-default">
+	  	 		<div class="panel-heading">Crystal Game</div>
+	  	 				<div class="panel-body">
+
+						  	 <p>You will be given a random number at the start of the game.</p>
+
+						  	 <p>There are four crystals. By clicking on a crystal, you will add a specific amount of points to your total score. </p>
+
+						  	 <p>You will win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+
+						  	 <p>The value of each crystal is hidden form you until you click on it.</p>
+
+						  	 <p>Each time when the game mstarts, the game will change the values of each crystal.</p>
+
+
+						  	 <!--Where scores will be placed-->
+						  	 <div class="score">
+
+						  	 		<h1>Wins: 0</h1>
+						  	 		<h1>Losses: 0</h1>
+
+						  	 </div>
+
+
+
+	  					</div>
+	 		</div>
+	</div>
+
+
+
+	<!--Game Panel-->
+
+	<div class="col-sm-7">
+		<!--First row of Gems-->
+	  	<div class="row">
+
+				 <img id ="pinkGem" src="assets/images/pinkGem.png">
+				  		
+
+				 <img id ="tealGem" src="assets/images/tealGem.png" >
+		 </div>
+
+
+		<!--Second row of Gems-->		 
+		<div class="row">
+
+				 <img id ="yellowGem" src="assets/images/yellowGem.png" >
+				  	
+
+				 <img id ="redGem" src="assets/images/redGem.png" >
+
+		</div>
+
+		<!--Score Boards-->
+
+		<div id="scoreBoards">
+
+				<div class="row">
+					 <div class="col-md-4">
+
+					  		<div class="panel panel-default">
+					  	 		<div class="panel-heading"><h1 id="scoreBoardHeader">Random Number</h1></div>
+					  	 				<div class="panel-body">
+
+
+
+										  	 <!--Where scores will be placed-->
+										  	 <div class="score">
+													<h1 id="targetPointsFont">35</h1>
+										  	 		
+										  	 </div>
+
+
+					  					</div>
+					 		</div>
+					</div>
+
+
+					<div class="col-md-4">
+
+					  		<div class="panel panel-default">
+					  	 		<div class="panel-heading"><h1 id="scoreBoardHeader">Total Points</h1></div>
+					  	 				<div class="panel-body">
+
+
+
+										  	 <!--Where scores will be placed-->
+										  	 <div class="score">
+
+										  	 		<h1 id="actualPointsFont">0</h1>
+
+										  	 </div>
+
+
+					  					</div>
+					 		</div>
+					</div>
+
+			 </div>
+	</div>
+
+
+
+
+	 
+		  		
+<!-- jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script> 
+	  	
+	
+<script src="assets/javascript/game.js"></script>
+
+
+	
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+body{
+background-image: url('../images/background.png') ;
+background-repeat: no-repeat;
+background-size: 130%;
+}
+
+.row{
+
+    margin-right: -15px;
+    margin-left: 55px;
+    margin-top: 10%;
+   }
+
+   .panel-default>.panel-heading {
+    color: #ffe6cc;
+    background-color: #ff8080;
+    border-color: #990000;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.panel-default{
+
+	background-color: #ffe6cc;
+	border-color:  #ffcc66;
+	border-width: 3px;
+
+}
+
+p{
+	color: navy;
+}
+
+.score{
+	color: navy;
+}
+
+#pinkGem{
+	margin-top: -15%;
+	width: 30%;
+	height: 30%;
+	margin-left: 5%;
+}
+
+#tealGem{
+	margin-top: -15%;
+	width: 17%;
+	height: 17%;
+	margin-left: 18%;
+}
+
+#redGem{
+
+	width: 23%;
+	height: 23%;
+	margin-left: 20%;
+}
+
+
+#yellowGem{
+
+	width: 21%;
+	height: 21%;
+	margin-left: 10%;
+}
+
+
+#scoreBoards{
+
+	margin-left: 15%;
+
+}
+
+#scoreBoardHeader{
+
+	font-size: 18px;
+	margin-top: -2%;
+	margin-bottom: -2%;
+
+}
+
+#targetPointsFont{
+
+	text-align: center;
+	font-size: 50px;
+	color: green;
+}
+
+
+
+#actualPointsFont{
+
+	text-align: center;
+	font-size: 50px;
+	color: navy;
+}
