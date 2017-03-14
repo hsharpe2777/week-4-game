@@ -1,67 +1,104 @@
 
-//restart();
 
-//function restart(){
 //Declare global variables
-var compGuess = Math.floor((Math.random() * 100) + 5);
-var tealNum = Math.floor((Math.random() * 10) + 1);
-var redNum = Math.floor((Math.random() * 20) + 1);
-var yellowNum = Math.floor((Math.random() * 40) + 1);
-var pinkNum = Math.floor((Math.random() * 20) + 1);
+var compGuess = 0;
+var tealNum = Math.floor((Math.random() * 5) + 1);
+var redNum = Math.floor((Math.random() * 15) + 1);
+var yellowNum = Math.floor((Math.random() * 25) + 1);
+var pinkNum = Math.floor((Math.random() * 8) + 1);
 var points = 0;
+var losses = 0;
+var wins = 0;
 
 
-//if(points > compGuess){
+restart();
 
-//restart();
 
-//}
-//else{
+function restart(){
 
-//generate computer guess
+points = 0;
+
+compGuess = Math.floor((Math.random() * 100) + 10);
 $("#targetPointsFont").html(compGuess);
+$("#actualPointsFont").html(points);
+console.log(points);
+//generate computer guess
+
+checkPoints();
 
 
 
+console.log(compGuess);
 
 
 $("#tealGem").on("click", function(){
-
 	var newNum = parseInt($("#actualPointsFont").html());
 	points = tealNum + newNum;
-	$("#actualPointsFont").html(points);
+	checkPoints();
+	//$("#actualPointsFont").html(points);
+	//checkPoints();
+	//$("#actualPointsFont").html(points);
+	//console.log(points);;
+	
+
 });
+
 
 
 //red Gem randomNumber generator
 $("#redGem").on("click", function(){
-
 	var newNum = parseInt($("#actualPointsFont").html());
 	points = redNum + newNum;
-	$("#actualPointsFont").html(points);
-
-
+	checkPoints();
+	
 });
 
 
 //yellow Gem randomNumber generator
 $("#yellowGem").on("click", function(){
-
 	var newNum = parseInt($("#actualPointsFont").html());
 	points = yellowNum + newNum;
 	$("#actualPointsFont").html(points);
-});
+	checkPoints();
+
+})
+
 
 
 //pink Gem randomNumber generator
 $("#pinkGem").on("click", function(){
-
 	var newNum = parseInt($("#actualPointsFont").html());
 	points = pinkNum + newNum;
-	$("#actualPointsFont").html(points);
+	checkPoints();
+	
 
-})//}
+})
+
+}
+
+function checkPoints(){
+	if(points === compGuess){
+
+		$("#actualPointsFont").html(points);
+		alert("You Won!");
+		restart();
+		wins++;
+		$("#score").html("<h1>"+"Wins: "+wins+"</h1>" + "<h1>"+"Losses: "+losses+"</h1>");
+
+	}
+
+	if (points > compGuess){
+		$("#actualPointsFont").html(points);
+		alert("You Lost!");
+		restart();
+		losses++;
+		$("#score").html("<h1>"+"Wins: "+wins+"</h1>" + "<h1>"+"Losses: "+losses+"</h1>");
+	}
+
+	else{
+
+		$("#actualPointsFont").html(points);
+	}
+}
 
 
-
-//}
