@@ -107,14 +107,19 @@ $("#pinkGem").on("click", function(){
 
 
 function checkPoints(){
+
+	//display points in div
+	$("#actualPointsFont").html(points);
+	
 	//if computer your total points = random guess 
 	if(points === compGuess){
+
+		//$("#actualPointsFont").html(points);
+
 		
 		//call game over function after 1 second
 		setTimeout(gameover,1000);
 		
-		//display your total points in "actualPoints" div
-		$("#actualPointsFont").html(points);
 
 		//alert the user that they won
 		alert("You Won!");
@@ -124,6 +129,9 @@ function checkPoints(){
 		$("#score").html("<h1>"+"Wins: "+wins+"</h1>" + "<h1>"+"Losses: "+losses+"</h1>");
 
 	}
+
+	$("#actualPointsFont").html(points);
+
 	//if user accumulated points is more than computer.. 
 	//random number
 	if (points > compGuess){
@@ -140,12 +148,6 @@ function checkPoints(){
 		
 	}
 
-	else{
-      //if your points are not equal to cumputer random number
-      //or if you haven't gone over, allow your points to continue
-      //to accumulate and display in div
-		$("#actualPointsFont").html(points);
-	}
 }
 
 
